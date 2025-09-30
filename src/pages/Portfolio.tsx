@@ -9,28 +9,28 @@ import project4 from "@/assets/project4.jpg";
 
 const projects = [
   {
-    id: 1,
+    id: "project-1",
     title: "NEON DYSTOPIA",
     description: "An open-world cyberpunk adventure featuring dynamic combat systems, branching narratives, and a living, breathing city that reacts to your choices. Experience the dark future where every decision matters.",
     image: project1,
     techStack: ["Unreal Engine", "C++", "Blueprint", "AI"],
   },
   {
-    id: 2,
+    id: "project-2",
     title: "STELLAR FRONTIER",
     description: "Explore the vast expanse of space in this sci-fi epic. Command your fleet, discover alien civilizations, and uncover the mysteries of the cosmos in this procedurally generated universe.",
     image: project2,
     techStack: ["Unity", "C#", "Procedural Gen", "Multiplayer"],
   },
   {
-    id: 3,
+    id: "project-3",
     title: "LEGENDS OF AETHERIA",
     description: "A third-person action RPG set in a rich fantasy world. Master magical abilities, forge legendary weapons, and lead your party through epic boss battles in this immersive adventure.",
     image: project3,
     techStack: ["Unreal Engine", "Python", "Animation", "UI/UX"],
   },
   {
-    id: 4,
+    id: "project-4",
     title: "VELOCITY STRIKE",
     description: "Fast-paced competitive FPS with tactical gameplay. Dominate the arena with precision shooting, strategic team play, and intense multiplayer action. Ranked competitive and casual modes available.",
     image: project4,
@@ -105,7 +105,7 @@ const Portfolio = () => {
 
                   {/* View Project Button */}
                   <div className="pt-4">
-                    <Link to="/">
+                    <Link to={`/projects/${project.id}`}>
                       <Button 
                         className="w-full group/btn font-heading bg-secondary hover:bg-secondary/90 text-secondary-foreground glow-blue transition-all duration-300"
                       >
