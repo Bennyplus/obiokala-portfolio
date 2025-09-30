@@ -1,10 +1,8 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
-  const scrollToPortfolio = () => {
-    document.getElementById('featured-projects')?.scrollIntoView({ behavior: 'smooth' });
-  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-background">
@@ -28,14 +26,15 @@ const HeroSection = () => {
           
           {/* CTA Button */}
           <div className="pt-8 animate-slide-up" style={{ animationDelay: '0.3s' }}>
-            <Button 
-              onClick={scrollToPortfolio}
-              size="lg"
-              className="group font-heading text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground hover-scale glow-blue transition-all duration-300"
-            >
-              View Portfolio
-              <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            <Link to="/portfolio">
+              <Button 
+                size="lg"
+                className="group font-heading text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground hover-scale glow-blue transition-all duration-300"
+              >
+                View Portfolio
+                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

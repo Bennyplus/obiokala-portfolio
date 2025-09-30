@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 
@@ -21,13 +22,15 @@ const FooterCTA = () => {
           </p>
           
           <div className="pt-4">
-            <Button 
-              size="lg"
-              className="group font-heading text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground hover-scale glow-blue transition-all duration-300"
-            >
-              <Mail className="mr-2 w-5 h-5" />
-              Contact Me
-            </Button>
+            <Link to="/contact">
+              <Button 
+                size="lg"
+                className="group font-heading text-lg px-8 py-6 bg-secondary hover:bg-secondary/90 text-secondary-foreground hover-scale glow-blue transition-all duration-300"
+              >
+                <Mail className="mr-2 w-5 h-5" />
+                Contact Me
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

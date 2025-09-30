@@ -1,5 +1,6 @@
 import { useState } from "react";
 import LoadingSpinner from "@/components/LoadingSpinner";
+import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import FeaturedProjects from "@/components/FeaturedProjects";
@@ -13,6 +14,7 @@ const Index = () => {
       <LoadingSpinner onLoadComplete={() => setIsLoaded(true)} />
       {isLoaded && (
         <div className="min-h-screen bg-dark-space">
+          <Navigation />
           <HeroSection />
           <AboutSection />
           <FeaturedProjects />
