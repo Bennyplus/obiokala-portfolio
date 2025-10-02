@@ -33,7 +33,7 @@ const AboutSection = () => {
               </h2>
               <div className="space-y-4 text-light-text text-lg leading-relaxed">
                 <p>
-                  Welcome to my digital realm. I'm a passionate game developer dedicated to crafting immersive experiences that push the boundaries of interactive entertainment.
+                  I’m a Game Developer with a B.Eng in Electrical & Electronic Engineering, currently pursuing an MSc in Game Development (Programming) at Kingston University (2025). What excites me most is transforming raw ideas into polished, interactive experiences that immerse players fully.
                 </p>
                 <p>
                   With expertise in cutting-edge game engines and a deep understanding of player psychology, I transform creative visions into unforgettable gaming experiences. From sprawling open worlds to intense multiplayer battles, every project is a journey into the extraordinary.

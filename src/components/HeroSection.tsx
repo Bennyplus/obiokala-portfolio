@@ -16,12 +16,12 @@ const HeroSection = () => {
         <div className="text-center space-y-8 animate-fade-in">
           {/* Main Heading */}
           <h1 className="font-heading text-6xl md:text-8xl lg:text-9xl font-black tracking-tight text-foreground">
-            CLIENT NAME
+             Francis Obiokala
           </h1>
           
           {/* Subheading */}
           <p className="font-heading text-2xl md:text-3xl lg:text-4xl font-medium text-neon-green tracking-wide">
-            Game Developer | Immersive Worlds Creator
+            Game Developer | Programmer
           </p>
           
           {/* CTA Button */}
