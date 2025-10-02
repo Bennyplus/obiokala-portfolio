@@ -36,7 +36,8 @@ const AboutSection = () => {
                   I’m a Game Developer with a B.Eng in Electrical & Electronic Engineering, currently pursuing an MSc in Game Development (Programming) at Kingston University (2025). What excites me most is transforming raw ideas into polished, interactive experiences that immerse players fully.
                 </p>
                 <p>
-                  With expertise in cutting-edge game engines and a deep understanding of player psychology, I transform creative visions into unforgettable gaming experiences. From sprawling open worlds to intense multiplayer battles, every project is a journey into the extraordinary.
+                  I primarily work in C# and C++, with experience building scalable, well-structured systems that balance performance and flexibility. My strengths lie in connecting all aspects of a game, from mechanics and input to animation, VFX, and sound into a seamless player experience.
+                  I’m eager to contribute to teams that push the boundaries of gameplay, crafting digital experiences that are both enjoyable and impactful.
                 </p>
                 <p className="font-heading text-xl text-primary">
                   Let's create worlds that players will never forget.
