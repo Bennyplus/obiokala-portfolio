@@ -17,7 +17,7 @@ const projects = [
   {
     id: "project-2",
     title: "FACE OF THE FUTURE (Kingston University Game Jam Winner 2025)",
-    description: "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.",
+    description: "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.” The player takes the role of a surveillance operator, scanning a busy urban area through a movable overhead camera to identify wanted suspects.",
     image: project2,
     techStack: ["Unity"],
   },

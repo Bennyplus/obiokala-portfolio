@@ -18,6 +18,7 @@ type Project = {
   tech: string[];
   features: string[];
   team: TeamMember[];
+  downloadLink: string;
 };
 
 const projectsData: Record<string, Project> = {
@@ -28,7 +29,7 @@ const projectsData: Record<string, Project> = {
     fullDescription:
       "Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown, a powerful object at the center of the arena. Matches blend combat, strategy, and teamwork as players must balance between holding the Crown for points, defending their base, and outmaneuvering opponents with unique elemental abilities.",
     image: project1,
-    tech: ["Unreal Engine", "C++", "Blueprint", "AI"],
+    tech: ["Unity", "C#", "PHP", "AWS", "MySQL", "Photon"],
     features: [
       "Dynamic open-world with real-time city simulation and reactive NPCs",
       "Deep branching narrative with multiple endings based on player choices",
@@ -36,30 +37,37 @@ const projectsData: Record<string, Project> = {
       "Fully customizable character progression with hundreds of upgrades",
     ],
     team: [
-      { name: "Rotimi-Dairo Benedict", role: "Frontend Developer" },
-      { name: "Ngozi Eze", role: "Backend Engineer" },
-      { name: "David John", role: "UI/UX Designer" },
+      { name: "Runcheng Luo ", role: "Game Designer" },
+      { name: "Zikang Han ", role: "Game Designer" },
+      { name: "Zixin Zhang ", role: "Game Designer" },
+      { name: "Francis Obiokala ", role: "Game Programmer" },
+      { name: "Manan Gandhi ", role: "Game Programmer" },
     ],
+    downloadLink: "https://manan2k.itch.io/elemental-echo",
   },
   "project-2": {
-    title: "STELLAR FRONTIER",
+    title: "FACE OF THE FUTURE (Kingston University Game Jam Winner 2025)",
     description:
-      "Explore the vast expanse of space in this sci-fi epic. Command your fleet, discover alien civilizations, and uncover the mysteries of the cosmos.",
+      "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.” The player takes the role of a surveillance operator, scanning a busy urban area through a movable overhead camera to identify wanted suspects",
     fullDescription:
-      "STELLAR FRONTIER is an ambitious space exploration game that offers players an entire procedurally generated universe to discover. Command your own fleet of customizable spacecraft, establish diplomatic relations or wage war with alien civilizations, and uncover the ancient mysteries that lie at the heart of the cosmos. The game combines deep strategic fleet management with intense real-time space combat and rich exploration gameplay.",
+      "At first, the player relies on direct observation—matching suspects by clothing, accessories, and descriptions. As the wanted list grows across rounds, players can purchase automated drones to assist. However, each drone adds a permanent pop-up to the HUD, cluttering the screen and creating pressure to trust automation. Drones make identifications with a short timer, defaulting to arrests if the player doesn’t ",
     image: project2,
     tech: ["Unity", "C#", "Procedural Gen", "Multiplayer"],
     features: [
-      "Procedurally generated universe with billions of star systems to explore",
-      "Complex diplomacy system with multiple alien factions and alliances",
-      "Real-time multiplayer battles with up to 64 players",
-      "Deep economy and trading systems with player-driven markets",
+      "Surveillance Gameplay: Scan a crowded map, identify suspects by matching physical traits.",
+      "Automation Trade-offs: Purchase drones to assist, but at the cost of increasing interface clutter and risk of misidentification.",
+      "Round-based Progression: Difficulty escalates with larger wanted lists and higher quotas.",
+      "Consequences: Correct arrests earn money; mistakes cost money and can cause failure.",
+      "Narrative Twist: At the end, automated systems can turn against the player, highlighting the dangers of over-dependence."
     ],
     team: [
-      { name: "Rotimi-Dairo Benedict", role: "Frontend Developer" },
-      { name: "Ngozi Eze", role: "Backend Engineer" },
-      { name: "David John", role: "UI/UX Designer" },
+      { name: "Runcheng Luo ", role: "Game Designer" },
+      { name: "Zikang Han ", role: "Game Designer" },
+      { name: "Zixin Zhang ", role: "Game Designer" },
+      { name: "Francis Obiokala ", role: "Game Programmer" },
+      { name: "Manan Gandhi ", role: "Game Programmer" },
     ],
+    downloadLink: "https://dave-murray.itch.io/face-of-the-future",
   },
 };
 
@@ -155,21 +163,21 @@ const ProjectDetail = () => {
 
           <div className="bg-dark-surface pl-8 pb-8 rounded-lg space-y-5 border border-border">
             <h2 className="font-heading text-2xl text-foreground mt-10 mb-4">
-            Development Team
-          </h2>
-          <ul className="space-y-3">
-            {project.team.map((member, index) => (
-              <li
-                key={index}
-                className="flex items-start gap-3 text-muted-foreground"
-              >
-                <span className="text-neon-green text-xl">▹</span>
-                <span>
-                  <strong>{member.name}</strong> — {member.role}
-                </span>
-              </li>
-            ))}
-          </ul>
+              Development Team
+            </h2>
+            <ul className="space-y-3">
+              {project.team.map((member, index) => (
+                <li
+                  key={index}
+                  className="flex items-start gap-3 text-muted-foreground"
+                >
+                  <span className="text-neon-green text-xl">▹</span>
+                  <span>
+                    <strong>{member.name}</strong> — {member.role}
+                  </span>
+                </li>
+              ))}
+            </ul>
             <h2 className="font-heading text-2xl text-foreground mb-4">
               About This Project
             </h2>
@@ -177,12 +185,18 @@ const ProjectDetail = () => {
               {project.fullDescription}
             </p>
 
-            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 glow-blue hover-scale font-heading">
-              <ExternalLink className="w-4 h-4 mr-2" />
-              View Live Demo
-            </Button>
+            <a
+              href={project.downloadLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              
+            >
+              <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 glow-blue hover-scale font-heading mt-5 ">
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Download for Windows
+              </Button>
+            </a>
           </div>
-          
         </div>
       </div>
     </div>
