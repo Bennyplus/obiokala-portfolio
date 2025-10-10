@@ -2,76 +2,81 @@ import { useParams, Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import project1 from "@/assets/project1.jpg";
+import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import project4 from "@/assets/project4.jpg";
 
-const projectsData = {
+type TeamMember = {
+  name: string;
+  role: string;
+};
+
+type Project = {
+  title: string;
+  description: string;
+  fullDescription: string;
+  image: string;
+  tech: string[];
+  features: string[];
+  team: TeamMember[];
+};
+
+const projectsData: Record<string, Project> = {
   "project-1": {
-    title: "NEON DYSTOPIA",
-    description: "An open-world cyberpunk adventure featuring dynamic combat systems, branching narratives, and a living, breathing city that reacts to your choices.",
-    fullDescription: "NEON DYSTOPIA is a groundbreaking open-world cyberpunk RPG that pushes the boundaries of player choice and narrative consequences. Set in a dystopian megacity where corporations rule and technology has become both salvation and curse, players navigate a morally complex world where every decision ripples through the fabric of society. The game features a revolutionary dynamic combat system that adapts to your playstyle, a branching narrative with multiple endings, and a living city that responds to your actions in real-time.",
+    title: "ELEMENTAL ECHO",
+    description:
+      "The game’s world is rooted in lore about resisting the Great Stillness, with battles serving as echoes of elemental energy that keep the world alive.",
+    fullDescription:
+      "Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown, a powerful object at the center of the arena. Matches blend combat, strategy, and teamwork as players must balance between holding the Crown for points, defending their base, and outmaneuvering opponents with unique elemental abilities.",
     image: project1,
     tech: ["Unreal Engine", "C++", "Blueprint", "AI"],
     features: [
       "Dynamic open-world with real-time city simulation and reactive NPCs",
       "Deep branching narrative with multiple endings based on player choices",
       "Revolutionary combat system combining melee, ranged, and cybernetic abilities",
-      "Fully customizable character progression with hundreds of upgrades"
-    ]
+      "Fully customizable character progression with hundreds of upgrades",
+    ],
+    team: [
+      { name: "Rotimi-Dairo Benedict", role: "Frontend Developer" },
+      { name: "Ngozi Eze", role: "Backend Engineer" },
+      { name: "David John", role: "UI/UX Designer" },
+    ],
   },
   "project-2": {
     title: "STELLAR FRONTIER",
-    description: "Explore the vast expanse of space in this sci-fi epic. Command your fleet, discover alien civilizations, and uncover the mysteries of the cosmos.",
-    fullDescription: "STELLAR FRONTIER is an ambitious space exploration game that offers players an entire procedurally generated universe to discover. Command your own fleet of customizable spacecraft, establish diplomatic relations or wage war with alien civilizations, and uncover the ancient mysteries that lie at the heart of the cosmos. The game combines deep strategic fleet management with intense real-time space combat and rich exploration gameplay.",
+    description:
+      "Explore the vast expanse of space in this sci-fi epic. Command your fleet, discover alien civilizations, and uncover the mysteries of the cosmos.",
+    fullDescription:
+      "STELLAR FRONTIER is an ambitious space exploration game that offers players an entire procedurally generated universe to discover. Command your own fleet of customizable spacecraft, establish diplomatic relations or wage war with alien civilizations, and uncover the ancient mysteries that lie at the heart of the cosmos. The game combines deep strategic fleet management with intense real-time space combat and rich exploration gameplay.",
     image: project2,
     tech: ["Unity", "C#", "Procedural Gen", "Multiplayer"],
     features: [
       "Procedurally generated universe with billions of star systems to explore",
       "Complex diplomacy system with multiple alien factions and alliances",
       "Real-time multiplayer battles with up to 64 players",
-      "Deep economy and trading systems with player-driven markets"
-    ]
+      "Deep economy and trading systems with player-driven markets",
+    ],
+    team: [
+      { name: "Rotimi-Dairo Benedict", role: "Frontend Developer" },
+      { name: "Ngozi Eze", role: "Backend Engineer" },
+      { name: "David John", role: "UI/UX Designer" },
+    ],
   },
-  "project-3": {
-    title: "LEGENDS OF AETHERIA",
-    description: "A third-person action RPG set in a rich fantasy world. Master magical abilities, forge legendary weapons, and lead your party through epic boss battles.",
-    fullDescription: "LEGENDS OF AETHERIA is a stunning third-person action RPG that brings classic fantasy storytelling to life with modern gameplay mechanics. Set in the mystical realm of Aetheria, players embark on an epic quest to save their world from an ancient evil. The game features a deep magic system with over 100 unique spells, an innovative weapon crafting system that lets you forge legendary equipment, and challenging boss battles that test your skills and strategy.",
-    image: project3,
-    tech: ["Unreal Engine", "Python", "Animation", "UI/UX"],
-    features: [
-      "Over 100 unique magical abilities across 6 distinct schools of magic",
-      "Advanced weapon crafting system with elemental infusions and enchantments",
-      "Epic boss battles featuring multi-phase encounters and unique mechanics",
-      "Rich fantasy world with branching quest lines and memorable characters"
-    ]
-  },
-  "project-4": {
-    title: "VELOCITY STRIKE",
-    description: "Fast-paced competitive FPS with tactical gameplay. Dominate the arena with precision shooting, strategic team play, and intense multiplayer action.",
-    fullDescription: "VELOCITY STRIKE is a competitive first-person shooter that emphasizes tactical teamwork and precision gunplay. Built on a custom game engine optimized for competitive play, the game offers razor-sharp controls, balanced weapon mechanics, and maps designed for strategic depth. With both ranked competitive modes and casual play options, VELOCITY STRIKE caters to both hardcore esports enthusiasts and players looking for intense tactical action.",
-    image: project4,
-    tech: ["Custom Engine", "Netcode", "Physics", "Audio"],
-    features: [
-      "Lightning-fast netcode ensuring minimal latency for competitive play",
-      "15+ weapons with unique handling and strategic roles",
-      "Ranked competitive mode with seasonal ladders and tournaments",
-      "10 meticulously designed maps optimized for competitive play"
-    ]
-  }
 };
 
 const ProjectDetail = () => {
   const { projectId } = useParams<{ projectId: string }>();
-  const project = projectId ? projectsData[projectId as keyof typeof projectsData] : null;
+  const project = projectId
+    ? projectsData[projectId as keyof typeof projectsData]
+    : null;
 
   if (!project) {
     return (
       <div className="min-h-screen bg-dark-space flex items-center justify-center">
         <Navigation />
         <div className="text-center">
-          <h1 className="font-heading text-4xl text-foreground mb-4">Project Not Found</h1>
+          <h1 className="font-heading text-4xl text-foreground mb-4">
+            Project Not Found
+          </h1>
           <Link to="/portfolio">
             <Button className="bg-primary text-primary-foreground hover:bg-primary/90 glow-neon">
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -86,11 +91,11 @@ const ProjectDetail = () => {
   return (
     <div className="min-h-screen bg-dark-space">
       <Navigation />
-      
+
       <div className="container mx-auto px-6 py-20">
         <Link to="/portfolio">
-          <Button 
-            variant="outline" 
+          <Button
+            variant="outline"
             className="mb-8 hover:border-primary hover:text-primary hover-scale"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -108,8 +113,8 @@ const ProjectDetail = () => {
 
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             <div className="relative group overflow-hidden rounded-lg">
-              <img 
-                src={project.image} 
+              <img
+                src={project.image}
                 alt={project.title}
                 className="w-full h-auto rounded-lg transition-transform duration-300 group-hover:scale-105"
               />
@@ -117,10 +122,12 @@ const ProjectDetail = () => {
             </div>
 
             <div>
-              <h2 className="font-heading text-2xl text-foreground mb-4">Tech Stack</h2>
+              <h2 className="font-heading text-2xl text-foreground mb-4">
+                Tech Stack
+              </h2>
               <div className="flex flex-wrap gap-3 mb-8">
                 {project.tech.map((tech) => (
-                  <span 
+                  <span
                     key={tech}
                     className="px-4 py-2 bg-dark-surface border border-border rounded-md text-primary font-heading text-sm hover:border-primary hover-scale transition-all"
                   >
@@ -129,10 +136,15 @@ const ProjectDetail = () => {
                 ))}
               </div>
 
-              <h2 className="font-heading text-2xl text-foreground mb-4">Key Features</h2>
+              <h2 className="font-heading text-2xl text-foreground mb-4">
+                Key Features
+              </h2>
               <ul className="space-y-3">
                 {project.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-3 text-muted-foreground">
+                  <li
+                    key={index}
+                    className="flex items-start gap-3 text-muted-foreground"
+                  >
                     <span className="text-neon-green text-xl">▹</span>
                     <span>{feature}</span>
                   </li>
@@ -141,19 +153,36 @@ const ProjectDetail = () => {
             </div>
           </div>
 
-          <div className="bg-dark-surface p-8 rounded-lg border border-border">
-            <h2 className="font-heading text-2xl text-foreground mb-4">About This Project</h2>
+          <div className="bg-dark-surface pl-8 pb-8 rounded-lg space-y-5 border border-border">
+            <h2 className="font-heading text-2xl text-foreground mt-10 mb-4">
+            Development Team
+          </h2>
+          <ul className="space-y-3">
+            {project.team.map((member, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-3 text-muted-foreground"
+              >
+                <span className="text-neon-green text-xl">▹</span>
+                <span>
+                  <strong>{member.name}</strong> — {member.role}
+                </span>
+              </li>
+            ))}
+          </ul>
+            <h2 className="font-heading text-2xl text-foreground mb-4">
+              About This Project
+            </h2>
             <p className="text-muted-foreground leading-relaxed mb-6">
               {project.fullDescription}
             </p>
-            
-            <Button 
-              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 glow-blue hover-scale font-heading"
-            >
+
+            <Button className="bg-secondary text-secondary-foreground hover:bg-secondary/90 glow-blue hover-scale font-heading">
               <ExternalLink className="w-4 h-4 mr-2" />
               View Live Demo
             </Button>
           </div>
+          
         </div>
       </div>
     </div>

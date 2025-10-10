@@ -1,17 +1,17 @@
-import project1 from "@/assets/project1.jpg";
+import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.jpg";
 
 const projects = [
   {
     id: 1,
-    title: "NEON DYSTOPIA",
-    description: "An open-world cyberpunk adventure featuring dynamic combat systems, branching narratives, and a living, breathing city that reacts to your choices.",
+    title: "ELEMENTAL ECHO",
+    description: "Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown, a powerful object at the center of the arena.",
     image: project1,
   },
   {
     id: 2,
-    title: "STELLAR FRONTIER",
-    description: "Explore the vast expanse of space in this sci-fi epic. Command your fleet, discover alien civilizations, and uncover the mysteries of the cosmos.",
+    title: "FACE OF THE FUTURE (Kingston University Game Jam Winner 2025)",
+    description: "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.” ",
     image: project2,
   },
 ];

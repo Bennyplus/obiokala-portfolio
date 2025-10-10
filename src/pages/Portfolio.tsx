@@ -2,40 +2,27 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import project1 from "@/assets/project1.jpg";
+import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.jpg";
-import project3 from "@/assets/project3.jpg";
-import project4 from "@/assets/project4.jpg";
+
 
 const projects = [
   {
     id: "project-1",
-    title: "NEON DYSTOPIA",
-    description: "An open-world cyberpunk adventure featuring dynamic combat systems, branching narratives, and a living, breathing city that reacts to your choices. Experience the dark future where every decision matters.",
+    title: "ELEMENTAL ECHO",
+    description: "Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown, a powerful object at the center of the arena.",
     image: project1,
-    techStack: ["Unreal Engine", "C++", "Blueprint", "AI"],
+    techStack: ["Unity", "C#", "PHP", "AWS", "MySQL", "Photon"],
   },
   {
     id: "project-2",
-    title: "STELLAR FRONTIER",
-    description: "Explore the vast expanse of space in this sci-fi epic. Command your fleet, discover alien civilizations, and uncover the mysteries of the cosmos in this procedurally generated universe.",
+    title: "FACE OF THE FUTURE (Kingston University Game Jam Winner 2025)",
+    description: "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.",
     image: project2,
-    techStack: ["Unity", "C#", "Procedural Gen", "Multiplayer"],
+    techStack: ["Unity"],
   },
-  {
-    id: "project-3",
-    title: "LEGENDS OF AETHERIA",
-    description: "A third-person action RPG set in a rich fantasy world. Master magical abilities, forge legendary weapons, and lead your party through epic boss battles in this immersive adventure.",
-    image: project3,
-    techStack: ["Unreal Engine", "Python", "Animation", "UI/UX"],
-  },
-  {
-    id: "project-4",
-    title: "VELOCITY STRIKE",
-    description: "Fast-paced competitive FPS with tactical gameplay. Dominate the arena with precision shooting, strategic team play, and intense multiplayer action. Ranked competitive and casual modes available.",
-    image: project4,
-    techStack: ["Custom Engine", "Netcode", "Physics", "Audio"],
-  },
+  
+  
 ];
 
 const Portfolio = () => {
@@ -130,7 +117,7 @@ const Portfolio = () => {
       <footer className="py-8 border-t border-border/50">
         <div className="container mx-auto px-6 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2025 CLIENT NAME. All rights reserved.
+            © 2025 Francis Obiokala. All rights reserved.
           </p>
         </div>
       </footer>

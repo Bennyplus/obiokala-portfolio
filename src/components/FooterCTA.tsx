@@ -39,7 +39,7 @@ const FooterCTA = () => {
       <div className="container mx-auto px-6 mt-16 relative z-10">
         <div className="border-t border-border/50 pt-8 text-center">
           <p className="text-muted-foreground text-sm">
-            © 2025 CLIENT NAME. All rights reserved.
+            © 2025 Francis Obiokala. All rights reserved.
           </p>
         </div>
       </div>
