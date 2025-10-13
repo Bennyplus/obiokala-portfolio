@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import project1 from "@/assets/project1.png";
-import project2 from "@/assets/project2.jpg";
-
+import project2 from "@/assets/project2.png";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 const projects = [
   {
@@ -19,7 +19,7 @@ const projects = [
     title: "FACE OF THE FUTURE (Kingston University Game Jam Winner 2025)",
     description: "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.” The player takes the role of a surveillance operator, scanning a busy urban area through a movable overhead camera to identify wanted suspects.",
     image: project2,
-    techStack: ["Unity"],
+    techStack: ["Unity", "C#"],
   },
   
   
@@ -114,13 +114,38 @@ const Portfolio = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 border-t border-border/50">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-muted-foreground text-sm">
-            © 2025 Francis Obiokala. All rights reserved.
-          </p>
+      <div className="container mx-auto px-6 mt-16 relative z-10">
+        <div className="border-t border-border/50 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Social Icons */}
+            <div className="flex space-x-4">
+              <a 
+                href="https://github.com/Fryo21" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+                aria-label="GitHub Profile"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a 
+                href="www.linkedin.com/in/francis-obiokala-8604b329b" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+            
+            {/* Copyright */}
+            <p className="text-muted-foreground text-sm order-first md:order-none">
+              © 2025 Francis Obiokala. All rights reserved.
+            </p>
+          </div>
         </div>
-      </footer>
+      </div>
     </div>
   );
 };

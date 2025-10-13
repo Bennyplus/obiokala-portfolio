@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 const FooterCTA = () => {
   return (
@@ -37,10 +37,35 @@ const FooterCTA = () => {
 
       {/* Footer */}
       <div className="container mx-auto px-6 mt-16 relative z-10">
-        <div className="border-t border-border/50 pt-8 text-center">
-          <p className="text-muted-foreground text-sm">
-            © 2025 Francis Obiokala. All rights reserved.
-          </p>
+        <div className="border-t border-border/50 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            {/* Social Icons */}
+            <div className="flex space-x-4">
+              <a 
+                href="https://github.com/Fryo21" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+                aria-label="GitHub Profile"
+              >
+                <Github className="w-5 h-5" />
+              </a>
+              <a 
+                href="www.linkedin.com/in/francis-obiokala-8604b329b" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-2 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
+                aria-label="LinkedIn Profile"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+            </div>
+            
+            {/* Copyright */}
+            <p className="text-muted-foreground text-sm order-first md:order-none">
+              © 2025 Francis Obiokala. All rights reserved.
+            </p>
+          </div>
         </div>
       </div>
     </section>
