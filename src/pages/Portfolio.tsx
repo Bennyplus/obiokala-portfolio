@@ -8,14 +8,14 @@ import { Mail, Github, Linkedin } from "lucide-react";
 
 const projects = [
   {
-    id: "project-1",
+    id: "elemental-echo",
     title: "ELEMENTAL ECHO",
     description: "Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown, a powerful object at the center of the arena.",
     image: project1,
     techStack: ["Unity", "C#", "PHP", "AWS", "MySQL", "Photon"],
   },
   {
-    id: "project-2",
+    id: "face-of-the-future",
     title: "FACE OF THE FUTURE (Kingston University Game Jam Winner 2025)",
     description: "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.” The player takes the role of a surveillance operator, scanning a busy urban area through a movable overhead camera to identify wanted suspects.",
     image: project2,
