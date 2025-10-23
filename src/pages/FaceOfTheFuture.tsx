@@ -38,11 +38,11 @@ export default function FaceOfTheFuture() {
     "Narrative Twist: At the end, automated systems can turn against the player, highlighting the dangers of over-dependence."
   ];
   const team = [
-    { name: "Runcheng Luo", role: "Game Designer" },
-    { name: "Zikang Han", role: "Game Designer" },
-    { name: "Zixin Zhang", role: "Game Designer" },
+    { name: "Dave Murray", role: "Game Programmer" },
     { name: "Francis Obiokala", role: "Game Programmer" },
-    { name: "Manan Gandhi", role: "Game Programmer" },
+    { name: "Ash Methven", role: "Game Programmer" },
+    { name: "Leo", role: "Game Programmer" },
+   
   ];
 
   return (
