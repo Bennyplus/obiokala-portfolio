@@ -5,7 +5,7 @@ const projects = [
   {
     id: 1,
     title: "ELEMENTAL ECHO",
-    description: "Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown, a powerful object at the center of the arena.",
+    description: "Elemental Echo is a competitive 2v2 third-person multiplayer arena battler where players harness the powers of elemental mages of different abilities (Fire, Water and Wind), to outmaneuver opponents, defend their base, and compete for dominance through strategic team play. Built in Unity with Photon PUN, the game challenges players to accumulate points through combat and objective control before the match timer runs out.  Each match revolves around the pursuit of the Crown, a central objective that grants continuous score points to the team that holds it. Players must work together to capture and protect the Crown while fending off enemy assaults and defending their home base. Points are earned through kills, assists, base destruction, and elemental synergy attacks, where combining abilities such as Fire and water triggers high-impact damage that can change the tide of battle. The match concludes when the timer expires, and victory is awarded to the team with the highest score.   Designed around coordination, timing, and tactical decision-making, Elemental Echo blends fast-paced combat with objective-based gameplay, rewarding both individual skill and team strategy. It is a fully networked architecture that supports real-time synchronization, persistent player data, and backend integration through PHP, MySQL, and AWS.",
     image: project1,
   },
   {
