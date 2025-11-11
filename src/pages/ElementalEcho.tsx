@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 
 // Import images
+
 import project1 from "@/assets/project1.png";
 import project1_2 from "@/assets/project1-2.png";
 import project1_3 from "@/assets/project1-3.png";
@@ -21,14 +22,29 @@ import project1_11 from "@/assets/project1-11.png"
 
 
 export default function ElementalEcho() {
-  const media = [project1, project1_2, project1_3, project1_4, project1_5, project1_6,project1_7,project1_8, project1_9, project1_10, project1_11];
+  const media = [
+  project1_5,
+  project1_6,
+  project1_2,
+  project1_11,
+  project1_3,
+  project1_8,
+  project1_4,
+  project1_7,
+  project1_10,
+  project1_9,
+  project1,
+];
   const tech = ["Unity", "C#", "PHP", "AWS", "MySQL", "Photon"];
   const features = [
-    "Built with event-driven systems and manager singletons (Round, Drone, Money, Feedback) enabling clean separation between gameplay logic, UI, and audio for scalable iteration.",
-    "NPCs and drones navigate dynamically using the A* Pathfinding Project, selecting valid graph nodes and verifying reachability with runtime path validation for believable movement.",
-    "Character and round data are generated from ScriptableObjects and LINQ-driven randomization, allowing fully procedural wanted lists and adaptive round difficulty.",
-    "Event-based UI updates synchronize game state, DOTween-animated feedback, and a custom animated cursor system for responsive and tactile interactions.",
-    "Each drone’s scanning accuracy decays with usage, creating emergent difficulty, later repurposed to target the player, showcasing systemic design reuse in narrative progression."
+    "Networked Multiplayer: Real-time 2v2 battles powered by Photon PUN, synchronizing player actions, abilities, and scores across all clients through RPCs and master-client authority.",
+    "Objective-Based Scoring: Players earn points by capturing the Crown, defeating opponents, and destroying bases; matches are timed, and the highest-scoring team at countdown wins.",
+    "Elemental Combat System: Each class—Fire, Water, or Air—features distinct abilities and ultimates, with dynamic synergy effects triggered by combining different elemental attacks.",
+    "Game Management Systems: Custom GameManager and ScoreManager scripts handle team scoring, player stats, and victory checks through event-driven RPC communication.",
+    "Lobby and Matchmaking: Photon-powered Lobby Manager system enables room creation, team selection, and matchmaking with synchronized player properties.",
+    "Base and Respawn Logic: Team bases serve as respawn anchors—once destroyed, players can’t respawn—implemented through BaseTakeDamage and PlayerRespawn scripts.",
+    "Backend Integration: Persistent player data handled via PHP/MySQL backend on AWS, storing authentication, match results, and leaderboard rankings.",
+    "Offline Mode: Photon Offline Mode enables local testing of networked features without an active internet connection."
   ];
   const team = [
     { name: "Runcheng Luo", role: "Game Designer" },
@@ -61,22 +77,25 @@ useEffect(() => {
         <h1 className="font-heading text-5xl md:text-6xl font-black text-neon-green mb-6">
           ELEMENTAL ECHO
         </h1>
-        <p className="text-muted-foreground mb-12 max-w-3xl">
-          Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown. Matches blend combat, strategy, and teamwork as players must balance between holding the Crown for points, defending their base, and outmaneuvering opponents with unique elemental abilities.
+        <p className="text-muted-foreground mb-12 max-w-full">
+         Elemental Echo is a competitive 2v2 third-person multiplayer arena battler where players harness the powers of elemental mages of different abilities (Fire, Water and Wind), to outmaneuver opponents, defend their base, and compete for dominance through strategic team play. Built in Unity with Photon PUN, the game challenges players to accumulate points through combat and objective control before the match timer runs out.  
+Each match revolves around the pursuit of the Crown, a central objective that grants continuous score points to the team that holds it. Players must work together to capture and protect the Crown while fending off enemy assaults and defending their home base. Points are earned through kills, assists, base destruction, and elemental synergy attacks, where combining abilities such as Fire and water triggers high-impact damage that can change the tide of battle. The match concludes when the timer expires, and victory is awarded to the team with the highest score.  
+ Designed around coordination, timing, and tactical decision-making, Elemental Echo blends fast-paced combat with objective-based gameplay, rewarding both individual skill and team strategy. It is a fully networked architecture that supports real-time synchronization, persistent player data, and backend integration through PHP, MySQL, and AWS.
         </p>
 
         {/* Masonry-Style Media Gallery */}
-<div className="columns-2 sm:columns-3 lg:columns-4 gap-4 mb-12">
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 mb-12">
   {media.map((img, index) => (
     <img
       key={index}
       onClick={() => setSelectedImage(img)}
       src={img}
       alt={`Elemental Echo screenshot ${index + 1}`}
-      className="w-full mb-4 rounded-lg break-inside-avoid hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer"
+      className="w-full rounded-lg hover:scale-[1.02] hover:shadow-lg transition-all duration-300 cursor-pointer"
     />
   ))}
 </div>
+
 {/* Image Modal */}
 {selectedImage && (
   <div
