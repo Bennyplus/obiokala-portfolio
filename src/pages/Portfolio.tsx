@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { useUISound } from "@/hooks/useUISounds";
 import Navigation from "@/components/Navigation";
 import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.png";
-import project3 from "@/assets/hoverline/hoverline_1.png"
+import project3 from "@/assets/hoverline/hoverline_1.png";
+import project4 from "@/assets/Extraction Protocol/Extraction Protocol_1.png";
 import { Mail, Github, Linkedin } from "lucide-react";
+import { Description } from "@radix-ui/react-toast";
 
 const projects = [
   {
@@ -28,13 +31,20 @@ const projects = [
   description: "Hoverline is a helicopter flight prototype focused on precision control under dynamically evolving wind conditions, featuring adaptive difficulty, physics-driven flight, and DualSense haptics.",
   image: project3,
   techStack: ["Unity", "C#", "Gameplay Systems", "Physics", "Haptics"],
-},
-
-  
+  },
+  {
+    id: "emergent-npc-ai",
+    title: "Extraction Protocol",
+    description: "A 3D tactical shooter prototype focused on adaptive enemy AI behaviour, integrating deep reinforcement learning with traditional game AI systems to enable interpretable, emergent decision-making at runtime.",
+    image: project4,
+    techStack: ["Unity", "C#", "ML-Agents", "Behaviour Trees", "Reinforcement Learning"],
+  },
   
 ];
 
 const Portfolio = () => {
+  const { play } = useUISound();
+
   return (
     <div className="min-h-screen bg-dark-space">
       <Navigation />
@@ -47,7 +57,7 @@ const Portfolio = () => {
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center animate-fade-in">
             <h1 className="font-heading text-6xl md:text-7xl lg:text-8xl font-black text-foreground mb-6">
-              Portfolio
+              Game Portfolio
             </h1>
             <div className="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6"></div>
             <p className="text-xl text-light-text max-w-2xl mx-auto">
@@ -64,6 +74,7 @@ const Portfolio = () => {
             {projects.map((project, index) => (
               <div
                 key={project.id}
+                onMouseEnter={() => play("hover")}
                 className="group relative bg-dark-surface rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 hover-scale animate-slide-up"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
@@ -103,6 +114,7 @@ const Portfolio = () => {
                   <div className="pt-4">
                     <Link to={`/projects/${project.id}`}>
                       <Button 
+                        onClick={() => play("click")}
                         className="w-full group/btn font-heading bg-secondary hover:bg-secondary/90 text-secondary-foreground glow-blue transition-all duration-300"
                       >
                         View Project
@@ -138,7 +150,7 @@ const Portfolio = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="www.linkedin.com/in/francis-obiokala-8604b329b" 
+                href="https://www.linkedin.com/in/francis-obiokala-8604b329b/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
