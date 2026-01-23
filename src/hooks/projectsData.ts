@@ -3,6 +3,8 @@ import ElementalEcho from "../pages/ElementalEcho";
 import FaceOfTheFuture from "../pages/FaceOfTheFuture";
 import Hoverline from "../pages/Hoverline";
 import ExtractionProtocol from "../pages/ExtractionProtocol";
+import TrashBrosApocalypse from "../pages/TrashBrosApocalypse";
+
 
 export const projectsData = {
 
@@ -17,6 +19,9 @@ export const projectsData = {
   },
   "extraction-protocol": {
     component: ExtractionProtocol
+  },
+  "trash-bros-apocalypse": { 
+    component: TrashBrosApocalypse 
   },
 
 };

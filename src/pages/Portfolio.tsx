@@ -7,8 +7,10 @@ import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.png";
 import project3 from "@/assets/hoverline/hoverline_1.png";
 import project4 from "@/assets/Extraction Protocol/Extraction Protocol_1.png";
+import project5 from "@/assets/TrashBrosApocalypse/TrashBros_1.png"
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Description } from "@radix-ui/react-toast";
+
 
 const projects = [
   {
@@ -39,6 +41,14 @@ const projects = [
     image: project4,
     techStack: ["Unity", "C#", "ML-Agents", "Behaviour Trees", "Reinforcement Learning"],
   },
+  {
+  id: "trash-bros-apocalypse",
+  title: "TRASH BROS: APOCALYPSE",
+  description:
+    "A third-person, quest-driven platformer vertical slice built in Unreal Engine, focusing on modular gameplay systems, event-driven architecture, and data-driven quest progression.",
+  image: project5, 
+  techStack: ["Unreal Engine", "C++", "Blueprints", "Gameplay Systems"],
+},
   
 ];
 
