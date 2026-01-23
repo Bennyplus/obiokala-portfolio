@@ -2,8 +2,10 @@
 import ElementalEcho from "../pages/ElementalEcho";
 import FaceOfTheFuture from "../pages/FaceOfTheFuture";
 import Hoverline from "../pages/Hoverline";
+import ExtractionProtocol from "../pages/ExtractionProtocol";
 
 export const projectsData = {
+
   "elemental-echo": {
     component: ElementalEcho,
   },
@@ -12,5 +14,9 @@ export const projectsData = {
   },
   "hoverline": { 
     component: Hoverline
-   },
+  },
+  "extraction-protocol": {
+    component: ExtractionProtocol
+  },
+
 };

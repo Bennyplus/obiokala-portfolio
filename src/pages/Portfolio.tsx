@@ -33,7 +33,7 @@ const projects = [
   techStack: ["Unity", "C#", "Gameplay Systems", "Physics", "Haptics"],
   },
   {
-    id: "emergent-npc-ai",
+    id: "extraction-protocol",
     title: "Extraction Protocol",
     description: "A 3D tactical shooter prototype focused on adaptive enemy AI behaviour, integrating deep reinforcement learning with traditional game AI systems to enable interpretable, emergent decision-making at runtime.",
     image: project4,
