@@ -1,6 +1,7 @@
 
 import ElementalEcho from "../pages/ElementalEcho";
 import FaceOfTheFuture from "../pages/FaceOfTheFuture";
+import Hoverline from "../pages/Hoverline";
 
 export const projectsData = {
   "elemental-echo": {
@@ -9,4 +10,7 @@ export const projectsData = {
   "face-of-the-future": {
     component: FaceOfTheFuture,
   },
+  "hoverline": { 
+    component: Hoverline
+   },
 };

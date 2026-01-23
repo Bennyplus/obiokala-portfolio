@@ -4,6 +4,7 @@ import { ExternalLink } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import project1 from "@/assets/project1.png";
 import project2 from "@/assets/project2.png";
+import project3 from "@/assets/hoverline/hoverline_1.png"
 import { Mail, Github, Linkedin } from "lucide-react";
 
 const projects = [
@@ -21,6 +22,14 @@ const projects = [
     image: project2,
     techStack: ["Unity", "C#"],
   },
+  {
+  id: "hoverline",
+  title: "HOVERLINE",
+  description: "Hoverline is a helicopter flight prototype focused on precision control under dynamically evolving wind conditions, featuring adaptive difficulty, physics-driven flight, and DualSense haptics.",
+  image: project3,
+  techStack: ["Unity", "C#", "Gameplay Systems", "Physics", "Haptics"],
+},
+
   
   
 ];
