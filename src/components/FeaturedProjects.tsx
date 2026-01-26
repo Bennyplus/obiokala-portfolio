@@ -1,4 +1,4 @@
-import project1 from "@/assets/project1.png";
+import project1 from "@/assets/ElementalEcho/Front Page.png";
 import project2 from "@/assets/project2.png";
 
 const projects = [

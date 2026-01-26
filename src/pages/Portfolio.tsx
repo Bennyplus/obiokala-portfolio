@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { useUISound } from "@/hooks/useUISounds";
 import Navigation from "@/components/Navigation";
-import project1 from "@/assets/project1.png";
+import project1 from "@/assets/ElementalEcho/Front Page.png";
 import project2 from "@/assets/project2.png";
 import project3 from "@/assets/hoverline/hoverline_1.png";
 import project4 from "@/assets/Extraction Protocol/Extraction Protocol_1.png";
@@ -17,9 +17,9 @@ const projects = [
   {
     id: "elemental-echo",
     title: "ELEMENTAL ECHO",
-    description: "Elemental Echo is a fast-paced 2v2 third-person shooter where players take on the roles of elemental mages (Fire, Water, or Wind) and battle to control The Crown, a powerful object at the center of the arena.",
+    description: "Elemental Echo is a fast-paced 2v2 multiplayer game where teams compete to control a central objective while attacking enemy bases and coordinating elemental abilities. The project showcases real-time multiplayer gameplay built with Photon Networking and a custom backend system for player accounts, statistics, and leaderboards.",
     image: project1,
-    techStack: ["Unity", "C#", "PHP", "AWS", "MySQL", "Photon"],
+    techStack: ["Unity", "C#", "Photon PUN", "PHP", "AWS", "MySQL"],
   },
   {
     id: "face-of-the-future",
