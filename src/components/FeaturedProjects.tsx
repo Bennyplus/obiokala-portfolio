@@ -1,5 +1,5 @@
 import project1 from "@/assets/ElementalEcho/Front Page.png";
-import project2 from "@/assets/project2.png";
+import project2 from "@/assets/FaceoftheFuture/FrontPage.png";
 
 const projects = [
   {

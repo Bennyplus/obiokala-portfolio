@@ -4,7 +4,7 @@ import { ExternalLink } from "lucide-react";
 import { useUISound } from "@/hooks/useUISounds";
 import Navigation from "@/components/Navigation";
 import project1 from "@/assets/ElementalEcho/Front Page.png";
-import project2 from "@/assets/project2.png";
+import project2 from "@/assets/FaceoftheFuture/FrontPage.png";
 import project3 from "@/assets/hoverline/hoverline_1.png";
 import project4 from "@/assets/Extraction Protocol/Extraction Protocol_1.png";
 import project5 from "@/assets/TrashBrosApocalypse/TrashBros_1.png"

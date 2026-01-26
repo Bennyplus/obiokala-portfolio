@@ -136,14 +136,14 @@ export default function ElementalEcho() {
           <p className="text-base  font-heading text-forground">
             <span className="font-medium">Developement Status:</span>{" "}
             <span className="text-neon-green">
-            Prototype Completed
+            Beta Completed
             </span>
           </p>
 
           <p className="text-base  font-heading text-forground">
             <span className="font-medium">Platform:</span>{" "}
             <span className="text-neon-green">
-            PC
+            PC (Windows)
             </span>
           </p>
         </div>
