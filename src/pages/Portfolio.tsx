@@ -8,6 +8,7 @@ import project2 from "@/assets/project2.png";
 import project3 from "@/assets/hoverline/hoverline_1.png";
 import project4 from "@/assets/Extraction Protocol/Extraction Protocol_1.png";
 import project5 from "@/assets/TrashBrosApocalypse/TrashBros_1.png"
+import project6 from "@/assets/Premuim Service/ChatGPT Image Jan 25, 2026, 10_18_10 PM.png"
 import { Mail, Github, Linkedin } from "lucide-react";
 import { Description } from "@radix-ui/react-toast";
 
@@ -42,13 +43,21 @@ const projects = [
     techStack: ["Unity", "C#", "ML-Agents", "Behaviour Trees", "Reinforcement Learning"],
   },
   {
-  id: "trash-bros-apocalypse",
-  title: "TRASH BROS: APOCALYPSE",
-  description:
-    "A third-person, quest-driven platformer vertical slice built in Unreal Engine, focusing on modular gameplay systems, event-driven architecture, and data-driven quest progression.",
-  image: project5, 
-  techStack: ["Unreal Engine", "C++", "Blueprints", "Gameplay Systems"],
-},
+    id: "trash-bros-apocalypse",
+    title: "TRASH BROS: APOCALYPSE",
+    description:
+      "A third-person, quest-driven platformer vertical slice built in Unreal Engine, focusing on modular gameplay systems, event-driven architecture, and data-driven quest progression.",
+    image: project5, 
+    techStack: ["Unreal Engine", "C++", "Blueprints", "Gameplay Systems"],
+  },
+  {
+    id: "premium-service",
+    title: "Premium Service (In Developement)",
+    description:
+      "A management simulation prototype focused on operational decision-making within a live event hospitality environment. The project explores order prioritisation, staff allocation, inventory management, and service efficiency under dynamic demand conditions.",
+    image: project6, 
+    techStack: ["Unity", "C#", "Simulation"],
+  },
   
 ];
 
