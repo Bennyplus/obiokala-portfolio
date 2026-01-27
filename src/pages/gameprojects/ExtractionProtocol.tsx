@@ -6,34 +6,33 @@ import Navigation from "@/components/Navigation";
 import ImageSliderModal from "@/components/ImageSliderModal";
 
 // Import images
-import img1 from "@/assets/TrashBrosApocalypse/TrashBros_1.png";
-import img2 from "@/assets/TrashBrosApocalypse/TrashBros_2.png";
-import img3 from "@/assets/TrashBrosApocalypse/TrashBros_3.png";
+import img1 from "@/assets/Extraction Protocol/Extraction Protocol_1.png";
+import img2 from "@/assets/Extraction Protocol/Extraction Protocol_2.png";
+import img3 from "@/assets/Extraction Protocol/Extraction Protocol_3.png";
 
-export default function TrashBrosApocalypse() {
+export default function ExtractionProtocol() {
   // Media
   const media = [img1, img2, img3];
 
   // Content
   const tech = [
-    "Unreal Engine",
-    "C++",
-    "Blueprints",
-    "DataAssets",
+    "Unity Engine",
+    "C#",
+    "ML-Agents",
+    "Behaviour Trees",
   ];
 
   const features = [
-    "Modular, event-driven gameplay architecture with loose coupling between quests, inventory, dialogue, tools, and world progression systems.",
-    "Data-driven quest system implemented using DataAssets, allowing designers to author quest logic, requirements, and rewards without modifying code.",
-    "NPC-authoritative quest progression enforced via UQuestGiverComponent, ensuring clear ownership of quest state and preventing UI-driven corruption.",
-    "Component-based inventory system supporting item validation, consumption, and reuse across quests, tools, and environment interactions.",
-    "Dialogue system with input gating and state isolation, preventing gameplay actions during narrative interaction while preserving clean control flow.",
-    "Global environment progression system broadcasting world-state updates to trigger debris removal, path unlocking, and visual feedback.",
-    "Tool-based capability progression enabling passive gameplay unlocks without additional UI complexity.",
+    "Layered enemy AI architecture separating perception, decision making, execution, and evaluation, enabling modular experimentation and benchmarking.",
+    "Hybrid AI decision system combining Behaviour Trees for deterministic action execution with reinforcement learning for high level intent selection.",
+    "Reinforcement learning driven intent selection enabling enemies to dynamically balance player engagement and objective pressure at runtime.",
+    "Unified decision interface routing heuristic, Behaviour Tree, and reinforcement learning decisions through identical execution paths for fair comparison.",
+    "Abstract training environment mirroring live gameplay observations, enabling efficient policy training without physics or animation dependencies.",
+    "Event based evaluation and metrics logging capturing intent switches, decision stability, and behaviour distribution for empirical analysis.",
   ];
 
   const team = [
-    { name: "Francis Obiokala", role: "Gameplay Programmer" },
+    { name: "Francis Obiokala", role: "AI / Gameplay Systems Programmer" },
   ];
 
   // Slider state
@@ -46,32 +45,34 @@ export default function TrashBrosApocalypse() {
 
       <div className="container mx-auto px-6 py-20 animate-fade-in">
         {/* Back */}
-        <Link to="/portfolio">
+        <Link to="/portfolio/games">
           <Button
             variant="outline"
-            className="mb-8 hover:border-primary hover:text-primary hover-scale"
+            className="mb-8 hover:bg-secondary/100 hover:border-secondary glow-blue hover-scale font-heading px-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Portfolio
+            Back to  Game Portfolio
           </Button>
         </Link>
 
         {/* Title */}
         <h1 className="font-heading text-5xl md:text-6xl font-black text-neon-green mb-6">
-          Trash Bros: Apocalypse
+          Extraction Protocol
         </h1>
 
         {/* Description */}
         <p className="text-muted-foreground mb-6 max-w-full">
-          Trash Bros: Apocalypse is a third-person, quest-driven platformer set in
-          a post-apocalyptic city, where player progression is driven by
-          environmental cleanup and sustainable interaction. The game was
-          developed as a vertical slice with a strong emphasis on modular gameplay
-          systems and event-driven architecture.
+          This project explores adaptive enemy behaviour in a 3D tactical shooter
+          prototype by integrating deep reinforcement learning into a traditional
+          game AI architecture. Enemy agents dynamically select high-level intent—
+          balancing player engagement and objective pressure—based on changing
+          game state, while low-level actions are executed through deterministic
+          Behaviour Trees. The system prioritises interpretability, stability, and
+          designer control while enabling emergent behaviour during gameplay.
         </p>
 
         <p className="font-medium mb-10">
-          Role: Gameplay Programmer
+          Role: Gameplay Programmer / Systems Programmer
         </p>
 
         {/* Media Grid */}

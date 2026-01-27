@@ -4,10 +4,15 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalLoadingSpinner from "@/components/GlobalLoadingSpinner";
+
 import Index from "./pages/Index";
-import Portfolio from "./pages/Portfolio";
+import PortfolioHub from "./pages/PortfolioHub";
+import GameProjects from "./pages/gameprojects/GameProjectPage";
+import GameProjectDetail from "./pages/GameProjectsDetail";
+import AIProjects from "./pages/aiprojects/AIProjectsPage";
+import AIProjectDetail from "./pages/AIProjectsDetails";
+
 import Contact from "./pages/Contact";
-import ProjectDetail from "./pages/ProjectDetail";
 import NotFound from "./pages/NotFound";
 
 
@@ -22,9 +27,12 @@ const App = () => (
         <GlobalLoadingSpinner />
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-          <Route path="/projects/:projectId" element={<ProjectDetail />} />
+          <Route path="/projects/:projectId" element={<GameProjectDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/ai-projects/:projectId" element={<AIProjectDetail />} />
+          <Route path="/portfolio" element={<PortfolioHub />} />
+          <Route path="/portfolio/games" element={<GameProjects />} />
+          <Route path="/portfolio/ai" element={<AIProjects />} />
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

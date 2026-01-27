@@ -77,13 +77,13 @@ export default function FaceOfTheFuture() {
 
       <div className="container mx-auto px-6 py-20 animate-fade-in">
         {/* Back */}
-        <Link to="/portfolio">
+        <Link to="/portfolio/games">
           <Button
             variant="outline"
-            className="mb-8 hover:border-primary hover:text-primary hover-scale"
+            className="mb-8 hover:bg-secondary/100 hover:border-secondary glow-blue hover-scale font-heading px-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Portfolio
+            Back to  Game Portfolio
           </Button>
         </Link>
 

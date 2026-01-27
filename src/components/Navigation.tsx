@@ -14,7 +14,7 @@ const Navigation = () => {
     <nav className="fixed top-0 right-0 z-40 p-6">
       <div className="flex gap-6">
         {navItems.map((item) => {
-          const isActive = location.pathname === item.path;
+          const isActive = item.path === "/portfolio" ? location.pathname.startsWith("/portfolio") : location.pathname === item.path;
           const Icon = item.icon;
           
           return (
