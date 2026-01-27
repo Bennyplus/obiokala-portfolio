@@ -11,6 +11,7 @@ import GameProjects from "./pages/gameprojects/GameProjectPage";
 import GameProjectDetail from "./pages/GameProjectsDetail";
 import AIProjects from "./pages/aiprojects/AIProjectsPage";
 import AIProjectDetail from "./pages/AIProjectsDetails";
+import PetBreedDemo from "./pages/aiprojects/PetBreedClassificationDemo";
 
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/portfolio" element={<PortfolioHub />} />
           <Route path="/portfolio/games" element={<GameProjects />} />
           <Route path="/portfolio/ai" element={<AIProjects />} />
+          <Route path="/portfolio/ai/pet-breed-classification/demo"   element={<PetBreedDemo />}/>
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
