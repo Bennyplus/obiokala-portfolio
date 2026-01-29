@@ -83,7 +83,7 @@ export default function FaceOfTheFuture() {
             className="mb-8 hover:bg-secondary/100 hover:border-secondary glow-blue hover-scale font-heading px-6"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to  Game Portfolio
+            Back to Game Portfolio
           </Button>
         </Link>
 

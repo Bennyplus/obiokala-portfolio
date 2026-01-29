@@ -342,13 +342,13 @@ export default function PetBreedClassification() {
                 <Link to="/portfolio/ai/pet-breed-classification/demo">
                   <Button
                     className="bg-secondary text-secondary-foreground border hover:bg-secondary/50 hover:border-secondary glow-blue hover-scale font-heading px-6">
-                    Live Demo
+                    Demo Interface
                 </Button>
                 </Link>
 
                 {/* Documentation */}
                 <a
-                href="https://github.com/YOUR_GITHUB_REPO_LINK"
+                href="https://github.com/Fryo21/pet-breed-classification-deep-learning"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
