@@ -1,5 +1,5 @@
 import { useParams, Navigate } from "react-router-dom";
-import { gameProjectsData } from "@/hooks/gameprojectsData";
+import { gameProjectsData } from "@/hooks/GameProjectsData";
 
 export default function GameProjectsDetail() {
   const { projectId } = useParams<{ projectId: string }>();
