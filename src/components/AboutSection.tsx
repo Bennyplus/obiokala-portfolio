@@ -22,14 +22,13 @@ const AboutSection = () => {
               </h2>
               <div className="space-y-4 text-light-text text-lg leading-relaxed">
                 <p>
-                  I’m a Game Developer with a B.Eng in Electrical & Electronic Engineering, currently pursuing an MSc in Game Development (Programming) at Kingston University (2025). What excites me most is transforming raw ideas into polished, interactive experiences that immerse players fully.
+                  I am a Game Development (Programming) graduate from Kingston University London with a strong interest in technology, software development, and interactive digital experiences, with technical experience in programming languages such as C#, C++, and Python. I build systems that bring gameplay, mechanics, and technical design together in ways that feel responsive and scalable.
                 </p>
                 <p>
-                  I primarily work in C# and C++, with experience building scalable, well-structured systems that balance performance and flexibility. My strengths lie in connecting all aspects of a game, from mechanics and input to animation, VFX, and sound into a seamless player experience.
-                  I’m eager to contribute to teams that push the boundaries of gameplay, crafting digital experiences that are both enjoyable and impactful.
+                  Through developing a range of projects, I have strengthened my understanding of gameplay architecture, modular system design, client-server architecture, data-driven systems, gameplay programming, multiplayer networking, AI systems, object-oriented programming, debugging, optimisation, and maintainable software development practices.
                 </p>
-                <p className="font-heading text-xl text-primary">
-                  Let's create worlds that players will never forget.
+                <p>
+                  I have experience working with engines and tools such as Unity, Unreal Engine, Photon PUN, ML-Agents, MySQL, and AWS. Across my projects, I focus on writing clean, structured code and building systems that are adaptable, efficient, and designed with scalability in mind.
                 </p>
               </div>
             </div>

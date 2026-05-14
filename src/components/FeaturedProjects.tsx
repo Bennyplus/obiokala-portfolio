@@ -5,13 +5,13 @@ const projects = [
   {
     id: 1,
     title: "ELEMENTAL ECHO",
-    description: "Elemental Echo is a competitive 2v2 third-person multiplayer arena battler where players harness the powers of elemental mages of different abilities (Fire, Water and Wind), to outmaneuver opponents, defend their base, and compete for dominance through strategic team play. Built in Unity with Photon PUN, the game challenges players to accumulate points through combat and objective control before the match timer runs out.  Each match revolves around the pursuit of the Crown, a central objective that grants continuous score points to the team that holds it. Players must work together to capture and protect the Crown while fending off enemy assaults and defending their home base. Points are earned through kills, assists, base destruction, and elemental synergy attacks, where combining abilities such as Fire and water triggers high-impact damage that can change the tide of battle. The match concludes when the timer expires, and victory is awarded to the team with the highest score.   Designed around coordination, timing, and tactical decision-making, Elemental Echo blends fast-paced combat with objective-based gameplay, rewarding both individual skill and team strategy. It is a fully networked architecture that supports real-time synchronization, persistent player data, and backend integration through PHP, MySQL, and AWS.",
+    description: "A competitive 2v2 multiplayer arena built in Unity with Photon PUN, elemental class abilities, real-time networking, and a persistent player backend on AWS.",
     image: project1,
   },
   {
     id: 2,
-    title: "FACE OF THE FUTURE (Kingston University Game Jam Winner 2025)",
-    description: "Face of the Future is a top-down 2D pixel art surveillance game created for a game jam around the theme “Automation Anxiety.” ",
+    title: "FACE OF THE FUTURE",
+    description: "Kingston University Game Jam Winner 2025. A surveillance-driven management game where automation challenges player authority as pressure mounts each round.",
     image: project2,
   },
 ];
@@ -31,33 +31,34 @@ const FeaturedProjects = () => {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="group relative bg-dark-surface rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 hover-scale animate-slide-up"
+              className="group relative h-[520px] rounded-lg overflow-hidden border border-border/40 hover:border-primary/30 transition-colors duration-500 animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              {/* Project Image */}
-              <div className="relative h-64 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-surface via-dark-surface/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
-              </div>
+              {/* Artwork — fills card, subtle zoom on hover */}
+              <img
+                src={project.image}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+              />
 
-              {/* Project Info */}
-              <div className="p-6 space-y-4">
-                <h3 className="font-heading text-2xl font-bold text-neon-green group-hover:text-primary transition-colors">
+              {/* Always-on bottom vignette */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+
+              {/* Cinematic overlay — fades in on hover */}
+              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+              {/* Text — slides up from below on hover */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
+                <h3 className="font-heading text-2xl font-black text-neon-green mb-3">
                   {project.title}
                 </h3>
-                <p className="text-light-text leading-relaxed">
+                <p className="text-light-text leading-relaxed text-sm max-w-sm">
                   {project.description}
                 </p>
               </div>
 
-              {/* Hover Glow Effect */}
-              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="absolute inset-0 glow-neon rounded-lg"></div>
-              </div>
+              {/* Glow on hover */}
+              <div className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 glow-neon transition-opacity duration-500" />
             </div>
           ))}
         </div>

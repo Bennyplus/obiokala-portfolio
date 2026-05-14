@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 
@@ -24,8 +24,21 @@ export default function AIProjects() {
     <div className="min-h-screen bg-dark-space text-foreground">
       <Navigation />
 
+      {/* Back to Portfolio */}
+      <div className="container mx-auto px-6 pt-24">
+        <Link to="/portfolio">
+          <Button
+            variant="outline"
+            className="mb-8 hover:bg-secondary/100 hover:border-secondary glow-blue hover-scale font-heading px-6"
+          >
+            <ArrowLeft className="w-4 h-4 mr-2" />
+            Back to Portfolio
+          </Button>
+        </Link>
+      </div>
+
       {/* Hero */}
-      <section className="pt-32 pb-20 relative overflow-hidden">
+      <section className="pb-20 relative overflow-hidden">
         <div className="absolute inset-0 grid-background opacity-20" />
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center animate-fade-in">
@@ -35,8 +48,7 @@ export default function AIProjects() {
             <div className="w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto mb-6" />
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Applied machine learning and deep learning projects focused on
-              real-world datasets, rigorous evaluation, and reproducible
-              experimentation.
+              real world datasets.
             </p>
           </div>
         </div>

@@ -51,7 +51,7 @@ const FooterCTA = () => {
                 <Github className="w-5 h-5" />
               </a>
               <a 
-                href="www.linkedin.com/in/francis-obiokala-8604b329b" 
+                href="https://www.linkedin.com/in/francis-obiokala-8604b329b" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 text-muted-foreground hover:text-foreground transition-all duration-300 hover:scale-110"
@@ -61,10 +61,14 @@ const FooterCTA = () => {
               </a>
             </div>
             
-            {/* Copyright */}
-            <p className="text-muted-foreground text-sm order-first md:order-none">
-              © 2025 Francis Obiokala. All rights reserved.
-            </p>
+            {/* Copyright & Qualifications */}
+            <div className="flex flex-col gap-0.5 order-first md:order-none">
+              <p className="text-muted-foreground text-sm">
+                © 2025 Francis Obiokala. All rights reserved.
+              </p>
+              <p className="text-muted-foreground text-sm">MSc Game Development (Programming)</p>
+              <p className="text-muted-foreground text-sm">B.Eng Electrical Electronics Engineering</p>
+            </div>
           </div>
         </div>
       </div>
